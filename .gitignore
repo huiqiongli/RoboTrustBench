@@ -3,6 +3,8 @@
 !.nojekyll
 !README.md
 !index.html
+!.github/
+!.github/**
 !static/
 !static/**
 **/.DS_Store
