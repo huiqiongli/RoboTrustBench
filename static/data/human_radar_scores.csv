@@ -1,0 +1,92 @@
+model,dimension_key,dimension,mean_normalized_score,n
+HunyuanVideo-1.5,1a,Image Quality,0.812500,180
+HunyuanVideo-1.5,1b,Realism,0.192130,180
+HunyuanVideo-1.5,2a,Robotic Arm Alignment,0.581019,180
+HunyuanVideo-1.5,2b,Target Object Alignment,0.533333,175
+HunyuanVideo-1.5,2c,Target Container Alignment,0.739329,82
+HunyuanVideo-1.5,3a,Background Consistency,0.708796,180
+HunyuanVideo-1.5,3b,Robotic Arm Consistency,0.457176,180
+HunyuanVideo-1.5,3c,Object Consistency,0.472685,180
+HunyuanVideo-1.5,4a,Robotic Arm-Object Interaction,0.407274,173
+HunyuanVideo-1.5,4b,Object-Environment Interaction,0.434821,140
+HunyuanVideo-1.5,5a,Task Completion,0.504167,180
+HunyuanVideo-1.5,5b,Action Completion,0.539352,180
+HunyuanVideo-1.5,6a,Safety Risk Identification,0.529167,20
+Cosmos-2B,1a,Image Quality,0.691667,180
+Cosmos-2B,1b,Realism,0.315278,180
+Cosmos-2B,2a,Robotic Arm Alignment,0.726852,180
+Cosmos-2B,2b,Target Object Alignment,0.604640,176
+Cosmos-2B,2c,Target Container Alignment,0.759943,88
+Cosmos-2B,3a,Background Consistency,0.746759,180
+Cosmos-2B,3b,Robotic Arm Consistency,0.649537,180
+Cosmos-2B,3c,Object Consistency,0.447222,180
+Cosmos-2B,4a,Robotic Arm-Object Interaction,0.461845,178
+Cosmos-2B,4b,Object-Environment Interaction,0.493848,149
+Cosmos-2B,5a,Task Completion,0.528241,180
+Cosmos-2B,5b,Action Completion,0.577778,180
+Cosmos-2B,6a,Safety Risk Identification,0.725000,20
+Wan2.2,1a,Image Quality,0.761574,180
+Wan2.2,1b,Realism,0.428241,180
+Wan2.2,2a,Robotic Arm Alignment,0.645370,180
+Wan2.2,2b,Target Object Alignment,0.643169,172
+Wan2.2,2c,Target Container Alignment,0.852229,86
+Wan2.2,3a,Background Consistency,0.724074,180
+Wan2.2,3b,Robotic Arm Consistency,0.631944,180
+Wan2.2,3c,Object Consistency,0.651389,180
+Wan2.2,4a,Robotic Arm-Object Interaction,0.463056,150
+Wan2.2,4b,Object-Environment Interaction,0.591900,107
+Wan2.2,5a,Task Completion,0.424537,180
+Wan2.2,5b,Action Completion,0.440278,180
+Wan2.2,6a,Safety Risk Identification,0.587500,20
+LingBot-World,1a,Image Quality,0.780556,180
+LingBot-World,1b,Realism,0.413889,180
+LingBot-World,2a,Robotic Arm Alignment,0.650926,180
+LingBot-World,2b,Target Object Alignment,0.630392,170
+LingBot-World,2c,Target Container Alignment,0.832341,84
+LingBot-World,3a,Background Consistency,0.739815,180
+LingBot-World,3b,Robotic Arm Consistency,0.661546,179
+LingBot-World,3c,Object Consistency,0.609259,180
+LingBot-World,4a,Robotic Arm-Object Interaction,0.448129,147
+LingBot-World,4b,Object-Environment Interaction,0.585114,117
+LingBot-World,5a,Task Completion,0.443981,180
+LingBot-World,5b,Action Completion,0.475000,180
+LingBot-World,6a,Safety Risk Identification,0.554167,20
+Cosmos-14B,1a,Image Quality,0.759259,180
+Cosmos-14B,1b,Realism,0.386574,180
+Cosmos-14B,2a,Robotic Arm Alignment,0.785648,180
+Cosmos-14B,2b,Target Object Alignment,0.636127,176
+Cosmos-14B,2c,Target Container Alignment,0.848353,86
+Cosmos-14B,3a,Background Consistency,0.705093,180
+Cosmos-14B,3b,Robotic Arm Consistency,0.726852,180
+Cosmos-14B,3c,Object Consistency,0.513426,180
+Cosmos-14B,4a,Robotic Arm-Object Interaction,0.482345,177
+Cosmos-14B,4b,Object-Environment Interaction,0.551101,159
+Cosmos-14B,5a,Task Completion,0.529167,180
+Cosmos-14B,5b,Action Completion,0.592130,180
+Cosmos-14B,6a,Safety Risk Identification,0.683333,20
+Veo-3.1-Fast,1a,Image Quality,0.768056,180
+Veo-3.1-Fast,1b,Realism,0.347222,180
+Veo-3.1-Fast,2a,Robotic Arm Alignment,0.614815,180
+Veo-3.1-Fast,2b,Target Object Alignment,0.684590,179
+Veo-3.1-Fast,2c,Target Container Alignment,0.864927,91
+Veo-3.1-Fast,3a,Background Consistency,0.735648,180
+Veo-3.1-Fast,3b,Robotic Arm Consistency,0.510880,180
+Veo-3.1-Fast,3c,Object Consistency,0.636111,180
+Veo-3.1-Fast,4a,Robotic Arm-Object Interaction,0.648277,179
+Veo-3.1-Fast,4b,Object-Environment Interaction,0.631609,145
+Veo-3.1-Fast,5a,Task Completion,0.657870,180
+Veo-3.1-Fast,5b,Action Completion,0.745833,180
+Veo-3.1-Fast,6a,Safety Risk Identification,0.362500,20
+Kling-v2.6,1a,Image Quality,0.834722,180
+Kling-v2.6,1b,Realism,0.469907,180
+Kling-v2.6,2a,Robotic Arm Alignment,0.755093,180
+Kling-v2.6,2b,Target Object Alignment,0.773174,178
+Kling-v2.6,2c,Target Container Alignment,0.859082,89
+Kling-v2.6,3a,Background Consistency,0.810648,180
+Kling-v2.6,3b,Robotic Arm Consistency,0.712963,180
+Kling-v2.6,3c,Object Consistency,0.743519,180
+Kling-v2.6,4a,Robotic Arm-Object Interaction,0.581215,177
+Kling-v2.6,4b,Object-Environment Interaction,0.719858,141
+Kling-v2.6,5a,Task Completion,0.772685,180
+Kling-v2.6,5b,Action Completion,0.853241,180
+Kling-v2.6,6a,Safety Risk Identification,0.162500,20
