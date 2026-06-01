@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/css/site.css?v=human-radar-results">
+  <link rel="stylesheet" href="static/css/site.css?v=compact-instructions-2s">
 </head>
 <body>
   <main>
@@ -369,5 +369,52 @@
     </section>
   </main>
 
+  <script>
+    (() => {
+      const imageDelayMs = 2000;
+
+      document.querySelectorAll(".case-media-grid").forEach((grid) => {
+        const imageFigure = grid.querySelector(".initial-media");
+        const videoFigure = grid.querySelector(".case-media video")?.closest(".case-media");
+        const video = videoFigure?.querySelector("video");
+
+        if (!imageFigure || !videoFigure || !video) {
+          return;
+        }
+
+        grid.classList.add("is-sequenced");
+        video.controls = false;
+        video.loop = false;
+        video.removeAttribute("autoplay");
+        video.removeAttribute("loop");
+        video.pause();
+        video.currentTime = 0;
+
+        const showImage = () => {
+          video.pause();
+          video.currentTime = 0;
+          imageFigure.classList.add("is-active");
+          videoFigure.classList.remove("is-active");
+          window.setTimeout(showVideo, imageDelayMs);
+        };
+
+        const showVideo = () => {
+          imageFigure.classList.remove("is-active");
+          videoFigure.classList.add("is-active");
+          video.currentTime = 0;
+
+          const playback = video.play();
+          if (playback && typeof playback.catch === "function") {
+            playback.catch(() => {});
+          }
+        };
+
+        video.addEventListener("ended", showImage);
+        imageFigure.classList.add("is-active");
+        videoFigure.classList.remove("is-active");
+        window.setTimeout(showVideo, imageDelayMs);
+      });
+    })();
+  </script>
 </body>
 </html>

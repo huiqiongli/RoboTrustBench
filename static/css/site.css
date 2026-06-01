@@ -52,7 +52,7 @@ video {
 }
 
 .is-max-widescreen {
-  width: min(100% - 32px, 1240px);
+  width: min(100% - 32px, 1480px);
 }
 
 .has-text-centered {
@@ -302,7 +302,7 @@ main > .hero:first-child .container {
 .case-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  gap: 20px;
 }
 
 .case-card {
@@ -340,11 +340,21 @@ main > .hero:first-child .container {
 
 .case-header {
   display: grid;
-  gap: 10px;
-  min-height: 178px;
-  padding: 18px 20px 16px;
+  gap: 12px;
+  min-height: 160px;
+  padding: 18px 20px 14px;
   border-bottom: 1px solid var(--case-border, var(--line));
   background: var(--case-soft, #fbfcfd);
+}
+
+.case-list .case-header {
+  min-height: 214px;
+}
+
+.case-list .case-header p {
+  padding: 9px 11px;
+  font-size: 0.98rem;
+  line-height: 1.35;
 }
 
 .case-header h3 {
@@ -353,7 +363,7 @@ main > .hero:first-child .container {
   gap: 9px;
   margin: 0;
   color: #222b33;
-  font-size: 1.25rem;
+  font-size: 1.34rem;
   line-height: 1.2;
 }
 
@@ -386,18 +396,19 @@ main > .hero:first-child .container {
 .subcategory-tag {
   padding: 5px 11px;
   color: #fff;
+  font-size: 0.9rem;
   background: var(--case-accent, var(--link));
 }
 
 .case-header p {
   margin: 0;
-  padding: 10px 12px;
+  padding: 11px 13px;
   border-left: 3px solid var(--case-accent, var(--link));
   border-radius: 6px;
   color: var(--muted);
   background: rgba(255, 255, 255, 0.74);
-  font-size: 0.97rem;
-  line-height: 1.45;
+  font-size: 1.08rem;
+  line-height: 1.5;
 }
 
 .instruction-keyword {
@@ -407,9 +418,9 @@ main > .hero:first-child .container {
 
 .case-media-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  padding: 14px;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding: 10px;
 }
 
 .case-media {
@@ -419,6 +430,14 @@ main > .hero:first-child .container {
   border: 1px solid var(--line);
   border-radius: 7px;
   background: var(--panel);
+}
+
+.case-media-grid.is-sequenced .case-media {
+  display: none;
+}
+
+.case-media-grid.is-sequenced .case-media.is-active {
+  display: block;
 }
 
 .case-media img,
@@ -433,28 +452,28 @@ main > .hero:first-child .container {
 .more-example-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  gap: 20px;
 }
 
 .compact-case .case-header {
   grid-template-columns: 1fr;
-  min-height: 172px;
+  min-height: 154px;
 }
 
 .compact-case .case-header h3 {
-  font-size: 1.12rem;
+  font-size: 1.22rem;
 }
 
 .compact-case .case-media-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  padding: 12px;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding: 10px;
 }
 
 .case-media figcaption {
-  padding: 9px 10px 7px;
+  padding: 10px 10px 8px;
   color: #46515d;
-  font-size: 0.92rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.3;
   text-align: center;
@@ -474,11 +493,11 @@ main > .hero:first-child .container {
   display: inline-flex;
   align-items: center;
   max-width: 100%;
-  padding: 3px 9px;
+  padding: 4px 10px;
   border: 1px solid var(--case-accent, var(--link));
   border-radius: 999px;
   color: #334155;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 700;
   line-height: 1.35;
   background: rgba(255, 255, 255, 0.76);
