@@ -143,6 +143,16 @@ main > .hero:first-child .container {
   margin: 0 4px 4px;
 }
 
+.corresponding-mark {
+  margin-left: 2px;
+  color: #172554;
+  font-weight: 700;
+}
+
+.corresponding-note {
+  margin-top: 4px;
+}
+
 .publication-links {
   display: flex;
   flex-wrap: wrap;
@@ -747,6 +757,66 @@ tr:last-child td {
   border-bottom: 0;
 }
 
+.bibtex-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+.bibtex-heading .title {
+  margin-bottom: 0;
+}
+
+.button.copy-bibtex-button {
+  min-width: 118px;
+  gap: 8px;
+  border-color: #3465df;
+  background: #3465df;
+  color: #fff;
+  font-weight: 700;
+}
+
+.button.copy-bibtex-button:hover {
+  border-color: #2451c2;
+  background: #2451c2;
+}
+
+.copy-icon {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+}
+
+.copy-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.bibtex-box {
+  margin: 0;
+  padding: 34px 38px;
+  overflow-x: auto;
+  border: 1px solid #d9e2ec;
+  border-radius: 14px;
+  background: #f4f7fb;
+  color: #263242;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 1rem;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.bibtex-box code {
+  white-space: pre;
+}
+
 @media (max-width: 1220px) {
   .title.is-4.teaser-summary {
     font-size: 1rem;
@@ -856,5 +926,19 @@ tr:last-child td {
 
   .button {
     width: min(100%, 260px);
+  }
+
+  .bibtex-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .button.copy-bibtex-button {
+    width: min(100%, 180px);
+  }
+
+  .bibtex-box {
+    padding: 22px 18px;
+    font-size: 0.84rem;
   }
 }

@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/css/site.css?v=compact-instructions-2s">
+  <link rel="stylesheet" href="static/css/site.css?v=bibtex-citation-update">
 </head>
 <body>
   <main>
@@ -28,7 +28,7 @@
           <span class="author-block"><a href="https://may0mei.github.io/" target="_blank" rel="noopener">Zhiting Mei</a><sup>3</sup>,</span>
           <span class="author-block"><a href="https://irom-lab.princeton.edu/majumdar/" target="_blank" rel="noopener">Anirudha Majumdar</a><sup>3</sup>,</span>
           <span class="author-block"><a href="https://jingjing1.github.io/#teach" target="_blank" rel="noopener">Jingjing Chen</a><sup>2</sup>,</span>
-          <span class="author-block"><a href="https://binzhubz.github.io/" target="_blank" rel="noopener">Bin Zhu</a><sup>1</sup></span>
+          <span class="author-block"><a href="https://binzhubz.github.io/" target="_blank" rel="noopener">Bin Zhu</a><sup>1</sup><sup class="corresponding-mark">&dagger;</sup></span>
         </div>
 
         <div class="publication-authors publication-affiliations">
@@ -36,13 +36,13 @@
           <span class="author-block"><sup>2</sup>Fudan University</span>
           <span class="author-block"><sup>3</sup>Princeton University</span>
           <br>
-          <span class="author-block"><strong>Correspondence:</strong> <a href="mailto:binzhu@smu.edu.sg">binzhu@smu.edu.sg</a></span>
+          <span class="author-block corresponding-note"><sup>&dagger;</sup>Corresponding author and project lead.</span>
         </div>
 
         <div class="publication-links">
-          <span class="button is-dark is-rounded is-disabled">
+          <a class="button is-dark is-rounded" href="https://arxiv.org/pdf/2606.01600" target="_blank" rel="noopener">
             <span>Paper</span>
-          </span>
+          </a>
           <a class="button is-dark is-rounded" href="https://huggingface.co/datasets/Huiqiong0124/RoboTrustBench_Dataset" target="_blank" rel="noopener">
             <span>Dataset</span>
           </a>
@@ -367,6 +367,30 @@
         </div>
       </div>
     </section>
+
+    <section class="section section-muted" id="citation">
+      <div class="container is-max-widescreen">
+        <div class="bibtex-heading">
+          <h2 class="title is-3">BibTeX</h2>
+          <button class="button is-dark is-rounded copy-bibtex-button" type="button" data-copy-target="robotrustbench-bibtex">
+            <span class="copy-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path d="M8 8h10v12H8z"></path>
+                <path d="M6 16H4V4h12v2"></path>
+              </svg>
+            </span>
+            <span>Copy</span>
+          </button>
+        </div>
+        <pre class="bibtex-box"><code id="robotrustbench-bibtex">@article{li2026robotrustbench,
+  title={RoboTrustBench: Benchmarking the Trustworthiness of Video World Models for Robotic Manipulation},
+  author={Li, Huiqiong and Wang, Jiayu and Mei, Zhiting and Majumdar, Anirudha and Chen, Jingjing and Zhu, Bin},
+  journal={arXiv preprint arXiv:2606.01600},
+  year={2026},
+  url={https://arxiv.org/abs/2606.01600}
+}</code></pre>
+      </div>
+    </section>
   </main>
 
   <script>
@@ -413,6 +437,33 @@
         imageFigure.classList.add("is-active");
         videoFigure.classList.remove("is-active");
         window.setTimeout(showVideo, imageDelayMs);
+      });
+
+      document.querySelectorAll("[data-copy-target]").forEach((button) => {
+        button.addEventListener("click", async () => {
+          const target = document.getElementById(button.dataset.copyTarget);
+          if (!target) {
+            return;
+          }
+
+          const originalText = button.querySelector("span:last-child")?.textContent || "Copy";
+          try {
+            await navigator.clipboard.writeText(target.textContent.trim());
+            const label = button.querySelector("span:last-child");
+            if (label) {
+              label.textContent = "Copied";
+              window.setTimeout(() => {
+                label.textContent = originalText;
+              }, 1400);
+            }
+          } catch (error) {
+            const selection = window.getSelection();
+            const range = document.createRange();
+            range.selectNodeContents(target);
+            selection.removeAllRanges();
+            selection.addRange(range);
+          }
+        });
       });
     })();
   </script>
