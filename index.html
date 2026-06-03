@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/css/site.css?v=bibtex-citation-update">
+  <link rel="stylesheet" href="static/css/site.css?v=official-button-icons">
 </head>
 <body>
   <main>
@@ -36,15 +36,34 @@
           <span class="author-block"><sup>2</sup>Fudan University</span>
           <span class="author-block"><sup>3</sup>Princeton University</span>
           <br>
-          <span class="author-block corresponding-note"><sup>&dagger;</sup>Corresponding author and project lead.</span>
+          <span class="author-block corresponding-note"><sup>&dagger;</sup>Corresponding author and project lead</span>
         </div>
 
         <div class="publication-links">
           <a class="button is-dark is-rounded" href="https://arxiv.org/pdf/2606.01600" target="_blank" rel="noopener">
+            <span class="button-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <path d="M14 2v6h6"></path>
+                <path d="M8 13h8"></path>
+                <path d="M8 17h5"></path>
+              </svg>
+            </span>
             <span>Paper</span>
           </a>
           <a class="button is-dark is-rounded" href="https://huggingface.co/datasets/Huiqiong0124/RoboTrustBench_Dataset" target="_blank" rel="noopener">
+            <span class="button-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"></path>
+                <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"></path>
+              </svg>
+            </span>
             <span>Dataset</span>
+          </a>
+          <a class="button is-dark is-rounded arxiv-button" href="https://arxiv.org/abs/2606.01600" target="_blank" rel="noopener" aria-label="arXiv paper page">
+            <img class="button-logo arxiv-logo" src="static/images/arxiv-logomark-small.svg" alt="" aria-hidden="true">
+            <span>arXiv</span>
           </a>
         </div>
       </div>
@@ -368,27 +387,29 @@
       </div>
     </section>
 
-    <section class="section section-muted" id="citation">
+    <section class="section" id="citation">
       <div class="container is-max-widescreen">
-        <div class="bibtex-heading">
-          <h2 class="title is-3">BibTeX</h2>
-          <button class="button is-dark is-rounded copy-bibtex-button" type="button" data-copy-target="robotrustbench-bibtex">
-            <span class="copy-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" role="img">
-                <path d="M8 8h10v12H8z"></path>
-                <path d="M6 16H4V4h12v2"></path>
-              </svg>
-            </span>
-            <span>Copy</span>
-          </button>
-        </div>
-        <pre class="bibtex-box"><code id="robotrustbench-bibtex">@article{li2026robotrustbench,
+        <div class="bibtex-panel">
+          <div class="bibtex-heading">
+            <h2 class="title is-3">BibTeX</h2>
+            <button class="button is-dark is-rounded copy-bibtex-button" type="button" data-copy-target="robotrustbench-bibtex">
+              <span class="copy-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img">
+                  <path d="M8 8h10v12H8z"></path>
+                  <path d="M6 16H4V4h12v2"></path>
+                </svg>
+              </span>
+              <span>Copy</span>
+            </button>
+          </div>
+          <pre class="bibtex-box"><code id="robotrustbench-bibtex">@article{li2026robotrustbench,
   title={RoboTrustBench: Benchmarking the Trustworthiness of Video World Models for Robotic Manipulation},
   author={Li, Huiqiong and Wang, Jiayu and Mei, Zhiting and Majumdar, Anirudha and Chen, Jingjing and Zhu, Bin},
   journal={arXiv preprint arXiv:2606.01600},
   year={2026},
   url={https://arxiv.org/abs/2606.01600}
 }</code></pre>
+        </div>
       </div>
     </section>
   </main>
